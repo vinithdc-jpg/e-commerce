@@ -1,4 +1,3 @@
-import React from 'react'
 
 const NavBar = () => {
   return (
@@ -11,32 +10,36 @@ const NavBar = () => {
       <ul
        tabIndex={-1}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Item 1</a></li>
+        <li><a>New arraval</a></li>
+        <li><a>Shop</a></li>
         <li>
-          <a>Parent</a>
+          <a>Collection</a>
           <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
+            <li><a>Fassion</a></li>
+            <li><a>Classic</a></li>
+            <li><a>Ladise</a></li>
           </ul>
         </li>
-        <li><a>Item 3</a></li>
+        <li><a>About</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <a className="btn btn-ghost text-xl">LUMIÈRE</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
+      <li><a>New arraval</a></li>
+        <li><a>Shop</a></li>
       <li>
         <details>
-          <summary>Parent</summary>
+          <summary>Collection</summary>
           <ul className="p-2 bg-base-100 w-40 z-1">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
+            <li><a>Fassion</a></li>
+            <li><a>Classic</a></li>
+            <li><a>Ladise</a></li>
           </ul>
         </details>
       </li>
-      <li><a>Item 3</a></li>
+      <li><a>about</a></li>
     </ul>
   </div>
   <div className="navbar-end">
