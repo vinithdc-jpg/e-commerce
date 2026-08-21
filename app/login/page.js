@@ -14,7 +14,7 @@ const page = () => {
                     <label className="label">Password</label>
                     <input type="password" className="input" placeholder="Password" />
 
-                    <Link href="/">Register</Link>
+                    <Link href="/Signup">Register</Link>
 
                     <button className="btn btn-neutral mt-4">Login</button>
                 </fieldset>
