@@ -1,4 +1,5 @@
 "use client";
+
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -39,7 +40,8 @@ const Page = () => {
       }
 
       router.push("/login");
-    } catch {
+    } catch (error) {
+      console.error(error);
       setError("Something went wrong");
     } finally {
       setLoading(false);
@@ -50,36 +52,63 @@ const Page = () => {
     <div className="flex justify-center items-center w-screen h-screen">
       <form onSubmit={handleRegister}>
         <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
-          <legend className="fieldset-legend">Sign up</legend>
+          <legend className="fieldset-legend">
+            Sign up
+          </legend>
 
-          <label className="label">Name</label>
+          <label className="label">
+            Name
+          </label>
+
           <input
             type="text"
             className="input"
-            placeholder="My awesome page"
+            placeholder="Enter your name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            required
           />
 
-          <label className="label">Email</label>
+          <label className="label">
+            Email
+          </label>
+
           <input
             type="email"
             className="input"
-            placeholder="my-awesome-page"
+            placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
 
-          <label className="label">Password</label>
+          <label className="label">
+            Password
+          </label>
+
           <input
             type="password"
             className="input"
-            placeholder="Name"
+            placeholder="Enter your password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            required
           />
-          <button className="btn btn-neutral mt-4" disabled={loading}>
-            {loading ? "Creating account..." : "Register"}
+
+          {error && (
+            <p className="text-red-500 text-sm mt-2">
+              {error}
+            </p>
+          )}
+
+          <button
+            type="submit"
+            className="btn btn-neutral mt-4"
+            disabled={loading}
+          >
+            {loading
+              ? "Creating account..."
+              : "Register"}
           </button>
         </fieldset>
       </form>
