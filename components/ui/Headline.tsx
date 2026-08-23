@@ -3,12 +3,12 @@ import React from 'react'
 
 const Headline = () => {
   return (
-    <div>
-      <div className='flex justify-between items-center min-w-screen'>
-        <h2>Our collections</h2>
-        <Link href="">view</Link>
+    <div className='p-7 bg-black/40'>
+      <div className='flex justify-between items-center'>
+        <h2 className='text-4xl'>Our collections</h2>
+        <Link href="" className='text-2xl'>view</Link>
       </div>
-      <div></div>
+      <div className='mt-3 bg-white/20 p-[1px]'></div>
     </div>
   )
 }
