@@ -4,16 +4,18 @@ const ImgUrl = "https://lh3.googleusercontent.com/aida-public/AB6AXuDl6MvpQusmg4
 
 const Archive = () => {
   return (
-    <div>
+    <div className='flex justify-around items-center h-[500px] bg-black/40'>
       <div>
-
+        <h1>THE ARCHIVE SALE</h1>
+        <p>Discover pieces from our previous collections at exceptional value. A curated selection of timeless silhouettes.</p>
+        <button>Enter Archive</button>
       </div>
       <div>
         <Image src={ImgUrl}
         alt='Image'
         height={300}
         width={300}
-        className="h-[320px] w-full object-cover"
+        className="object-cover"
         >
 
         </Image>
