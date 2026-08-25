@@ -1,3 +1,4 @@
+import Archive from "@/components/Archive";
 import Collection from "@/components/Collection";
 import Hero from "@/components/Hero";
 import Slideshow from "@/components/Slideshow";
@@ -11,6 +12,7 @@ const page = () => {
       </h1>
       <Slideshow />
       <Collection />
+      <Archive />
     </>
   );
 };

@@ -50,7 +50,6 @@ const Collection = () => {
                   className="h-[320px] w-full object-cover transition-transform duration-500 hover:scale-105"
                 />
               </div>
-
               <div className="mt-3 px-1">
                 <p className="text-xs font-medium uppercase tracking-widest text-gray-500">
                   {product.item}
