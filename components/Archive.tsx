@@ -5,7 +5,7 @@ const ImgUrl =
 
 const Archive = () => {
   return (
-    <div className="flex min-h-[500px] items-center justify-center gap-16 bg-black/40 px-10">
+    <div className="flex min-h-[500px] items-center justify-center gap-16 bg-white/40 px-10">
       {/* Content */}
       <div className="max-w-lg text-white">
         <p className="mb-3 text-sm uppercase tracking-[0.3em] text-gray-300">
@@ -32,12 +32,12 @@ const Archive = () => {
       </div>
 
       {/* Image */}
-      <div className="relative h-[380px] w-[300px] overflow-hidden">
+      <div className="relative h-[310px] w-[431px] overflow-hidden">
         <Image
           src={ImgUrl}
           alt="Archive collection"
           fill
-          className="object-cover transition-transform duration-500 hover:scale-105"
+          className="object-fill transition-transform duration-500"
         />
       </div>
     </div>

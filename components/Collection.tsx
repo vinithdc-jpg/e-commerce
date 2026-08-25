@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/image"
 import Headline from "./ui/Headline";
 
 const cards = [
@@ -51,15 +51,15 @@ const Collection = () => {
                 />
               </div>
               <div className="mt-3 px-1">
-                <p className="text-xs font-medium uppercase tracking-widest text-gray-500">
+                <p className="text-xs font-medium uppercase tracking-widest text-white">
                   {product.item}
                 </p>
 
-                <h3 className="mt-1 text-base font-medium text-gray-900">
+                <h3 className="mt-1 text-base font-medium text-white">
                   {product.detail}
                 </h3>
 
-                <p className="mt-2 text-sm font-medium text-gray-800">
+                <p className="mt-2 text-sm font-medium text-white">
                   ${product.rate}
                 </p>
               </div>
