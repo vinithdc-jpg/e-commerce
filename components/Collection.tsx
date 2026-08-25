@@ -1,8 +1,9 @@
+import Image from "next/image";
 import Headline from "./ui/Headline";
 
 const cards = [
   {
-    id:1,
+    id: 1,
     image: "/next.svg",
     item: "TOP",
     detail: "Structural Silk Blouse",
@@ -23,7 +24,7 @@ const cards = [
     rate: "$766",
   },
   {
-    id :4,
+    id: 4,
     image: "/next.svg",
     item: "Knitwear",
     detail: "Lightweight Cashmere Knit",
@@ -41,9 +42,11 @@ const Collection = () => {
           {cards.map((product) => (
             <div key={product.id} className="w-full">
               <div className="overflow-hidden rounded-sm border-2 border-violet-500 bg-gray-50">
-                <img
+                <Image
                   src={product.image}
                   alt={product.item}
+                  width={400}
+                  height={500}
                   className="h-[320px] w-full object-cover transition-transform duration-500 hover:scale-105"
                 />
               </div>
