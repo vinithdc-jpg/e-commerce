@@ -1,5 +1,6 @@
 import Archive from "@/components/Archive";
 import Collection from "@/components/Collection";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Slideshow from "@/components/Slideshow";
 
@@ -13,6 +14,7 @@ const page = () => {
       <Slideshow />
       <Collection />
       <Archive />
+      <Footer />
     </>
   );
 };
