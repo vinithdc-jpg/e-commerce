@@ -11,17 +11,18 @@ const NavBar = () => {
           <ul
             tabIndex={-1}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-            <li><a>New arraval</a></li>
-            <li><a>Shop</a></li>
+            <li><Link href='/NewArraval'>New Arraval</Link></li>
+            <li><Link href='/Shop'>Shop</Link></li>
             <li>
               <a>Collection</a>
               <ul className="p-2">
-                <li><a>Fassion</a></li>
-                <li><a>Classic</a></li>
-                <li><a>Ladise</a></li>
+                <li><Link href='/Collection'>Fassion</Link></li>
+                <li><Link href='/Collection'>Classic</Link></li>
+                <li><Link href='/Collection'>Ols class</Link></li>
+                
               </ul>
             </li>
-            <li><a>About</a></li>
+            <li><Link href='/About'>About</Link></li>
           </ul>
         </div>
         <a className="btn btn-ghost text-xl">LUMIÈRE</a>
