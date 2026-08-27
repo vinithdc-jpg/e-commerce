@@ -1,11 +1,12 @@
-import React from 'react'
+import SideBar from "@/components/NewArraval/SideBar";
+import React from "react";
 
 const page = () => {
   return (
-    <div>
-      Shop page 
-    </div>
-  )
-}
+    <>
+      <SideBar />
+    </>
+  );
+};
 
-export default page
+export default page;
