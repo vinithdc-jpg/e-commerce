@@ -1,33 +1,87 @@
-import React from "react";
+"use client";
 
-const SideBar = () => {
+import { useState } from "react";
+
+export default function SideBar() {
+  const [filters, setFilters] = useState({
+    category: [] as string[],
+    size: [] as string[],
+    color: [] as string[],
+    price: [] as string[],
+  });
+
+  const handleCheckbox = (
+    type: "category" | "size" | "color" | "price",
+    value: string,
+  ) => {
+    setFilters((prev) => {
+      const current = prev[type];
+
+      return {
+        ...prev,
+        [type]: current.includes(value)
+          ? current.filter((item) => item !== value)
+          : [...current, value],
+      };
+    });
+  };
+
   return (
-    <div className="drawer lg:drawer-open">
-      <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content flex flex-col items-center justify-center">
-        {/* Page content here */}
-        <label htmlFor="my-drawer-3" className="btn drawer-button lg:hidden">
-          Open drawer
-        </label>
+    <aside className="w-full max-w-[260px] border-r border-gray-200 pr-6">
+      {/* Title */}
+      <div className="mb-8">
+        <h2 className="text-lg font-semibold tracking-wide">FILTERS</h2>
       </div>
-      <div className="drawer-side">
-        <label
-          htmlFor="my-drawer-3"
-          aria-label="close sidebar"
-          className="drawer-overlay"
-        ></label>
-        <ul className="menu bg-base-200 min-h-full w-80 p-4">
-          {/* Sidebar content here */}
-          <li>
-            <a>Sidebar Item 1</a>
-          </li>
-          <li>
-            <a>Sidebar Item 2</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  );
-};
 
-export default SideBar;
+      {/* Category */}
+      <div className="border-b border-gray-200 pb-6">
+        <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider">
+          Category
+        </h3>
+
+        <div className="space-y-3">
+          {["Tops", "Dresses", "Pants", "Jackets"].map((item) => (
+            <label
+              key={item}
+              className="flex cursor-pointer items-center gap-3 text-sm text-gray-600"
+            >
+              <input
+                type="checkbox"
+                checked={filters.category.includes(item)}
+                onChange={() => handleCheckbox("category", item)}
+                className="h-4 w-4 accent-black"
+              />
+
+              <span>{item}</span>
+            </label>
+          ))}
+        </div>
+      </div>
+
+      {/* Size */}
+      <div className="border-b border-gray-200 py-6">
+        <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider">
+          Size
+        </h3>
+
+        <div className="space-y-3">
+          {["XS", "S", "M", "L", "XL"].map((item) => (
+            <label
+              key={item}
+              className="flex cursor-pointer items-center gap-3 text-sm text-gray-600"
+            >
+              <input
+                type="checkbox"
+                checked={filters.size.includes(item)}
+                onChange={() => handleCheckbox("size", item)}
+                className="h-4 w-4 accent-black"
+              />
+
+              <span>{item}</span>
+            </label>
+          ))}
+        </div>
+      </div>
+    </aside>
+  );
+}
