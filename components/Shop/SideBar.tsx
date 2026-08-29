@@ -27,7 +27,7 @@ export default function SideBar() {
   };
 
   return (
-    <aside className="max-w-[280px] h-[91vh] border-r border-zinc-800 bg-zinc-950 px-6 py-8 text-zinc-100">
+    <aside className="w-[280px] shrink-0 h-[91vh] border-r border-zinc-800 bg-zinc-950 px-6 py-8 text-zinc-100">
       {/* Header */}
       <div className="mb-8 flex items-center justify-between">
         <h2 className="text-xs font-bold uppercase tracking-[0.25em] text-zinc-100">
