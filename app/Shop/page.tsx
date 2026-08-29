@@ -1,4 +1,4 @@
-import SideBar from "@/components/NewArraval/SideBar";
+import SideBar from "@/components/Shop/SideBar";
 import React from "react";
 
 const page = () => {
