@@ -5,6 +5,11 @@ const page = () => {
   return (
     <>
       <SideBar />
+      <div>
+        <h1>
+          Shop All
+        </h1>
+      </div>
     </>
   );
 };
