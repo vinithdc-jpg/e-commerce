@@ -1,17 +1,24 @@
-import React from "react";
+import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div
-      className="hero min-h-[90vh] bg-cover bg-top bg-no-repeat"
-      style={{
-        backgroundImage:
-          "url('https://static.vecteezy.com/system/resources/thumbnails/011/911/023/small/full-street-fashion-slender-figure-beautiful-face-graceful-girl-sitting-on-isolated-white-background-portrait-of-female-model-in-studio-plastic-surgery-and-aesthetic-cosmetology-free-photo.jpg')",
-      }}
-    >
-      <div className="hero-content text-center">
-        <div className="max-w-md">
-          <h1 className="text-8xl font-bold text-black">THE NEW ELEGANCE</h1>
+    <div className="relative min-h-[90vh] overflow-hidden">
+      {/* Background Image */}
+      <Image
+        src="/Hero.jpg"
+        alt="New Elegance"
+        fill
+        priority
+        className="object-cover object-top"
+      />
+
+      {/* Content */}
+      <div className="relative z-10 flex min-h-[90vh] items-center justify-center text-center">
+        <div className="max-w-4xl">
+          <h1 className="text-6xl font-bold text-black md:text-8xl">
+            THE NEW ELEGANCE
+          </h1>
+
           <button className="btn btn-primary mt-5">Shop the Collection</button>
         </div>
       </div>
